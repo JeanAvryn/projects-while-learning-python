@@ -1,16 +1,18 @@
-def numberGuesser():
-    import random
-    
-    system = random.randint(1, 20)
-    
-    while True:
-        guess = int(input("Guess a number: "))
-        if guess > system:
-            print("Lower!")
-        elif guess < system:
-            print("Higher!")
-        elif guess == system:
-            print("Nice!")
-            break
-            
-numberGuesser()
+import random
+
+secret = random.randint(1, 20)
+lives = 5
+rounds = 0
+while True:
+    guess = int(input('Guess a number: '))
+    rounds += 1
+    if guess > secret:
+        print('Lower!')
+    elif guess < secret:
+        print('Higher!')
+    elif guess == secret:
+        print('Correct!')
+        break
+    if rounds == lives:
+        print(f'You lose! The number was {secret}.')
+        break
