@@ -38,7 +38,7 @@ def main():
     elif ask == 2:
         print(binaryCode())
     while ask not in [1,2]:
-        print('lol')
+        print('What areu doing?')
         break
 main()
     
