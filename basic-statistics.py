@@ -84,7 +84,7 @@ def find_sample_variance(array):
 
 def find_population_variance(array):
     vari_sum = find_variance(array)
-    return vari_sum / (len(array) - 1)
+    return vari_sum / len(array)
 
 def find_sample_stdev(array):
     sample_variance = find_sample_variance(array)
@@ -94,7 +94,7 @@ def find_population_stdev(array):
     population_variance = find_population_variance(array)
     return population_variance ** 0.5
 
-
+#TEST CASES
 print(find_mean(data))
 print(find_median(data))
 print(find_mode(data))
